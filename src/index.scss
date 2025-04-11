@@ -1,0 +1,51 @@
+$logo-size: 12rem;
+
+* {
+  box-sizing: border-box;
+  // font-size: 1.15vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.main {
+  flex: auto;
+  margin: auto;
+}
+
+header {
+  justify-items: center;
+  border: 2px solid black;
+  padding: 1vh 0;
+
+  img {
+    width: 20rem;
+    border-radius: 15%;
+  }
+}
+
+.side-bar {
+  flex: none;
+  width: 20vw;
+  border: 2px solid black;
+
+  &-hidden {
+    visibility: hidden;
+  }
+
+  button {
+    float: right;
+  }
+}
+
+// .top-menu {
+//   button {
+//     &.disabled {
+//       cursor: not-allowed;
+//       opacity: 0.6;
+//     }
+//   }
+// }
