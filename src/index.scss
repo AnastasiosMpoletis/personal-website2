@@ -1,23 +1,26 @@
-// $logo-size: 12rem;
-
 @mixin border {
   border: 2px solid black;
 }
 
+@mixin flex($direction: column, $align: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
   // font-size: 1.15vw;
 }
 
-// #logo {
-//   img {
-//     border-radius: 50%;
-//     border: 2px solid grey;
-//   }
-// }
+html {
+  scroll-behavior: smooth;
+}
 
 main {
   margin: auto;
+  width: auto;
 }
 
 header {
@@ -26,7 +29,7 @@ header {
   padding: 1vh 0;
 
   img {
-    width: 20rem;
+    width: 30vw;
     border-radius: 15%;
   }
 }
@@ -34,12 +37,37 @@ header {
 .side-bar {
   @include border;
   position: fixed;
+  @include flex(column);
+
+  img {
+    width: 3vw;
+    border-radius: 50%;
+    @include border;
+  }
 
   &-menu {
     @include border;
+    @include flex(column);
     padding: 2px 5px;
     background-color: rgba(255, 140, 0, 0.7);
     overflow-y: auto;
     max-height: 96vh;
+
+    button {
+      text-align: left;
+    }
+  }
+}
+
+.experience {
+  @include border;
+}
+
+.job {
+  @include border;
+  @include flex(column, center);
+
+  img {
+    width: 15vw;
   }
 }

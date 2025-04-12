@@ -1,5 +1,4 @@
-import logoImg from '../assets/ab-logo.png';
-import myPhoto from '../assets/my-photo.jpg';
+import myPhoto from '../../assets/my-photo.jpg';
 
 export default function Header() {
     return (

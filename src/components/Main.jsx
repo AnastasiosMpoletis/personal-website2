@@ -1,15 +1,11 @@
-import Header from "./Header.jsx";
+import Header from "./sections/Header.jsx";
+import Experience from "./sections/Experience.jsx";
 
-export default function Main() {
+export default function Main({ sectionsRefs }) {
     return (
-        <main>
+        <main ref={sectionsRefs[0]}>
             <Header />
-            <Header />
-            <Header />
-            <Header />
-            <Header />
-            <Header />
-            <Header />
+            <Experience experienceRef={sectionsRefs[2]} />
         </main>
     );
 }
