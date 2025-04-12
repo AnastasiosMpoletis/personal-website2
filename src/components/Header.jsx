@@ -1,7 +1,7 @@
 import logoImg from '../assets/ab-logo.png';
 import myPhoto from '../assets/my-photo.jpg';
 
-export default function Header({ isPinned }) {
+export default function Header() {
     return (
         <>
             {/* <div id='logo'>
